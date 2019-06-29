@@ -19,8 +19,6 @@ export default class App extends Component {
   addTimer () {
     const key = short.generate ();
     this.setState ({timers: _.concat (this.state.timers, key)});
-
-    console.log (this.timers);
   }
 
   onDeletePress (timer) {
