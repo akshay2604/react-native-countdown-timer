@@ -20,7 +20,6 @@ class Timer extends Component {
   _handleAppStateChange = nextAppState => {
     if (nextAppState === 'background' || nextAppState === 'inactive') {
       this.setState ({appState: nextAppState, backgroundTime: Date.now ()});
-      console.log (this.state.backgroundTime, 'backgroundTime');
     }
     if (
       this.state.appState.match (/inactive|background/) &&
@@ -54,7 +53,6 @@ class Timer extends Component {
     clearInterval (this.timerRef);
   }
   updateTimer () {
-    console.log (this.state.currentTime, 'this.state.currentTime');
     if (this.state.currentTime <= 0) {
       this.stopTimer ();
     } else {

@@ -17,7 +17,6 @@ export default class App extends Component {
   }
 
   addTimer () {
-    console.log ('addTimer');
     const key = short.generate ();
     this.setState ({timers: _.concat (this.state.timers, key)});
 
